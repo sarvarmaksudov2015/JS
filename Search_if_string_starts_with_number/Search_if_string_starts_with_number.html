@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>LetterCounter</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <script>
+
+// JavaScript Урок 48. Решение домашнего задания урока 47
+
+/*
+Написать функцию, которая получает в качестве параметра переменную 
+содержащую строку и с помощью регулярного выражения проверяет, 
+начинается ли содержимое этой переменной с цифры или нет. 
+
+Результат своей работы функция выводит на экран.
+
+Переменная для передачи в функцию: var forTesting = "8 пингвинов и 9 карасей.
+*/
+
+var forTesting = "There is 8 пингвинов и 9 карасей.";// Added text in the begin
+function numberTest(myString) {
+    var regV = /^\d/;
+    
+    if (myString.search(regV) == -1) {
+        document.write("String starts with no number."); // SHOULD RETURN THIS
+        } else {
+            document.write("String starts with number.");
+        }
+}
+
+numberTest(forTesting); 
+
+    </script>
+</body>
+</html>
+
