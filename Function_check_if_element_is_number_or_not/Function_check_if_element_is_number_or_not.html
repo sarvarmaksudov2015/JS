@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>LetterCounter</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <script>
+
+// JavaScript Урок 56. Решение домашнего задания урока 55
+
+/*
+Написать функцию, которая получает в качестве параметра массив, 
+затем перебирает все его элементы и выводит на экран, какая 
+информация содержится в каждом элементе: число или нечисло.
+Массив для примера: var randSimbol = ["Молоко", 77, 11, "Мед", -88];
+*/
+
+var randSimbol = ["Молоко", 77, 11, "Мед", -88];
+function arrayTest (anyArray) {
+    for (i = 0; i < anyArray.length; i++) {
+        if (isNaN(anyArray[i])) { // Niote: isNan check if the element is number or not
+            document.write("Array element " + anyArray[i] + " is NOT a number. <br />")
+            } else {
+            document.write("Array element " + anyArray[i] + " is a number. <br />");
+            }
+    }
+}
+
+// We have to call function
+
+arrayTest(randSimbol);
+
+    </script>
+</body>
+</html>
+
